@@ -1,0 +1,27 @@
+﻿@model ProductManagement.Models.Product
+
+@{
+    ViewData["Title"] = "Product Details";
+}
+
+<h2>Product Details</h2>
+<hr />
+
+<dl class="row">
+    <dt class="col-sm-3">@Html.DisplayNameFor(model => model.ProductName)</dt>
+    <dd class="col-sm-9">@Html.DisplayFor(model => model.ProductName)</dd>
+
+    <dt class="col-sm-3">@Html.DisplayNameFor(model => model.Category)</dt>
+    <dd class="col-sm-9">@Html.DisplayFor(model => model.Category)</dd>
+
+    <dt class="col-sm-3">@Html.DisplayNameFor(model => model.Price)</dt>
+    <dd class="col-sm-9">₹@Html.DisplayFor(model => model.Price)</dd>
+
+    <dt class="col-sm-3">@Html.DisplayNameFor(model => model.StockQuantity)</dt>
+    <dd class="col-sm-9">@Html.DisplayFor(model => model.StockQuantity)</dd>
+</dl>
+
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.ProductId" class="btn btn-warning">Edit</a>
+    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+</div>
